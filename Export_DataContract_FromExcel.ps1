@@ -1,3 +1,2 @@
-Import-Excel -path c:\temp\DataContract_AdventureWorksSQL.XLSX.XLSX -WorksheetName Connection | ConvertTo-Json
-Import-Excel -path c:\temp\DataContract_AdventureWorksSQL.XLSX.XLSX -WorksheetName SourceObject | ConvertTo-Json
-Import-Excel -path c:\temp\DataContract_AdventureWorksSQL.XLSX.XLSX -WorksheetName CopyMappings | ConvertTo-Json
+$DataContract = Import-Excel .\DataContract_AdventureWorksSQL.XLSX * | ConvertTo-Json -Depth 3
+$DataContract | Out-File DataContract_AdventureWorksSQL.JSON
