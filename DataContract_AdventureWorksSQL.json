@@ -1,0 +1,56 @@
+{
+  "Connection": [
+    {
+      "ServerName": "LocalHost.database.windows.net",
+      "Database": "AdventureWorks",
+      "TenantID": "5a52ef21-a166-448d-b166-343382146a2a",
+      "ServicePrincipalID": "04ab04b7-5f05-47c6-9f07-703406b01da6",
+      "SecretName": "Bos-Is-The-Admin",
+      "Name": "AzureSQL_AdventureWorks",
+      "Id": 42.0
+    }
+  ],
+  "SourceObject": [
+    {
+      "schema": "dbo",
+      "table": "SalesHistory"
+    }
+  ],
+  "CopyMappings": [
+    {
+      "name": "CustomerName",
+      "type": "String",
+      "physicalType": "nvarchar",
+      "SinkName": "CustomerName",
+      "SinkType": "String"
+    },
+    {
+      "name": "Address",
+      "type": "String",
+      "physicalType": "nvarchar",
+      "SinkName": "Address",
+      "SinkType": "String"
+    },
+    {
+      "name": "Status",
+      "type": "String",
+      "physicalType": "nvarchar",
+      "SinkName": "Status",
+      "SinkType": "String"
+    },
+    {
+      "name": "Order",
+      "type": "String",
+      "physicalType": "nvarchar",
+      "SinkName": "Order",
+      "SinkType": "String"
+    },
+    {
+      "name": "Activity",
+      "type": "String",
+      "physicalType": "nvarchar",
+      "SinkName": "Activity",
+      "SinkType": "String"
+    }
+  ]
+}
