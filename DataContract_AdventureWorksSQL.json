@@ -5,7 +5,7 @@
       "Database": "AdventureWorks",
       "TenantID": "5a52ef21-a166-448d-b166-343382146a2a",
       "ServicePrincipalID": "04ab04b7-5f05-47c6-9f07-703406b01da6",
-      "SecretName": "Bos-Is-The-Admin",
+      "SecretName": "Bob-Is-The-Admin",
       "Name": "AzureSQL_AdventureWorks",
       "Id": 42.0
     }
@@ -14,6 +14,29 @@
     {
       "schema": "dbo",
       "table": "SalesHistory"
+    }
+  ],
+  "CopySource": [
+    {
+      "partitionOption": "None",
+      "sqlReaderQuery": "SELECT *  FROM dbo.SalesHistory",
+      "partitionLowerBound": null,
+      "partitionUpperBound": null,
+      "partitionColumnName": null,
+      "partitionNames": null
+    }
+  ],
+  "DataLoadingBehavior": [
+    {
+      "dataLoadingBehavior": "FullLoad",
+      "watermarkColumnName": null,
+      "watermarkColumnType": null,
+      "watermarkColumnStartValue": null
+    }
+  ],
+  "Trigger": [
+    {
+      "Sandbox": "Trigger_SalesHistory"
     }
   ],
   "CopyMappings": [
@@ -51,6 +74,33 @@
       "physicalType": "nvarchar",
       "SinkName": "Activity",
       "SinkType": "String"
+    }
+  ],
+  "CopyActivity": [
+    {
+      "name": "CustomerName",
+      "type": "String",
+      "physicalType": "nvarchar"
+    },
+    {
+      "name": "Address",
+      "type": "String",
+      "physicalType": "nvarchar"
+    },
+    {
+      "name": "Status",
+      "type": "String",
+      "physicalType": "nvarchar"
+    },
+    {
+      "name": "Order",
+      "type": "String",
+      "physicalType": "nvarchar"
+    },
+    {
+      "name": "Activity",
+      "type": "String",
+      "physicalType": "nvarchar"
     }
   ]
 }
